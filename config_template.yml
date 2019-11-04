@@ -1,6 +1,6 @@
 listen:
   host: ${LISTEN_HOST}
-  port: ${LISTEN_PORT}
+  port: ${LISTEN_PO RT}
 
 storage:
   dir: ${STORAGE_DIR}
@@ -9,10 +9,6 @@ storage:
 behavior:
   dependency_isolation: ${BEHAVIOR_DEPENDENCY_ISOLATION}
   kernel_isolation: ${BEHAVIOR_KERNEL_ISOLATION}
-
-spark:
-  spark.driver.userClasspathFirst: ${SPARK_SPARK_DRIVER_USERCLASSPATHFIRST}
-  spark.executor.userClasspathFirst: ${SPARK_SPARK_EXECUTOR_USERCLASSPATHFIRST}
 
 ui:
   base_uri: ${UI_BASE_URI}

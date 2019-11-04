@@ -15,8 +15,6 @@ ENV LISTEN_HOST="0.0.0.0" \
     STORAGE_CACHE="tmp" \
     BEHAVIOR_DEPENDENCY_ISOLATION="false" \
     BEHAVIOR_KERNEL_ISOLATION="always" \
-    SPARK_SPARK_DRIVER_USERCLASSPATHFIRST="true" \
-    SPARK_SPARK_EXECUTOR_USERCLASSPATHFIRST="true" \
     UI_BASE_URI="/"
 
 ADD config_template.yml config_loader.py entrypoint.sh ./
