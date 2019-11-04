@@ -28,6 +28,7 @@ RUN apt-get update && \
     mkdir -p ${POLYNOTE_HOME} && \
     wget ${POLYNOTE_DOWNLOAD_LINK} && \
     tar -xvzf polynote-dist.tar.gz --strip-components 1 -C ${POLYNOTE_HOME} && \
+    rm -r ${POLYNOTE_HOME}/notebooks/examples && \
     rm polynote-dist.tar.gz && \
     chmod +x entrypoint.sh
 

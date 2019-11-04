@@ -5,13 +5,13 @@ config = yaml.safe_load(open("config_template.yml", "r"))
 
 
 def fill_config_from_env(config):
-    for item in config.keys():
-        if isinstance(config[item], dict):
-            fill_config_from_env(config[item])
+    for key, val in config.items():
+        if isinstance(val, dict):
+            fill_config_from_env(val)
         else:
-            config[item] = environ[config[item].replace("$", "").replace("{", "").replace("}", "")]
+            config[key] = environ[val.replace("$", "").replace("{", "").replace("}", "")]
 
     return config
 
 
-yaml.dump(fill_config_from_env(config), open("${polynote_home}/config.yml".format(polynote_home=environ["POLYNOTE_HOME"]), "w"))
+yaml.safe_dump(fill_config_from_env(config), open("{polynote_home}/config.yml".format(polynote_home=environ["POLYNOTE_HOME"]), "w"))
