@@ -1,6 +1,6 @@
 listen:
   host: ${LISTEN_HOST}
-  port: ${LISTEN_PO RT}
+  port: ${LISTEN_PORT}
 
 storage:
   dir: ${STORAGE_DIR}
