@@ -3,8 +3,7 @@
 
 import yaml
 from os import environ
-
-config = yaml.safe_load(open("config_template.yml", "r"))
+from sys import argv
 
 
 def fill_config_from_env(config):
@@ -17,4 +16,6 @@ def fill_config_from_env(config):
     return config
 
 
-yaml.safe_dump(fill_config_from_env(config), open("{polynote_home}/config.yml".format(polynote_home=environ["POLYNOTE_HOME"]), "w"))
+if __name__ == "__main__":
+    config = yaml.safe_load(open(argv[1], "r"))
+    yaml.safe_dump(fill_config_from_env(config), open("{polynote_home}/config.yml".format(polynote_home=environ["POLYNOTE_HOME"]), "w"))

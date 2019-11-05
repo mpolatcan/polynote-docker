@@ -14,11 +14,13 @@ ENV PATH=${POLYNOTE_HOME}:$PATH \
 	BEHAVIOR_KERNEL_ISOLATION="always" \
 	UI_BASE_URI="/"
 
-ADD config_template.yml config_loader.py entrypoint.sh ./
+ADD config_template.yml /polynote_config_template.yml
+ADD config_loader.py /polynote_config_loader.py
+ADD entrypoint.sh /polynote_entrypoint.sh
 
 RUN apt-get update && \
     apt-get -y install python3 python3-pip && \
     rm -rf /var/lib/apt/lists/* && \
     pip3 install setuptools pyyaml jep jedi virtualenv matplotlib && \
     mkdir -p ${POLYNOTE_HOME} && \
-    chmod +x entrypoint.sh
+    chmod +x polynote_entrypoint.sh

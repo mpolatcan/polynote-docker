@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-python3 config_loader.py
+python3 polynote_config_loader.py /polynote_config_template.yml
 polynote

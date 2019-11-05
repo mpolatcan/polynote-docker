@@ -12,4 +12,4 @@ RUN wget ${POLYNOTE_DOWNLOAD_LINK} && \
     rm -r ${POLYNOTE_HOME}/notebooks/examples && \
     rm polynote-dist.tar.gz
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["./polynote_entrypoint.sh"]
