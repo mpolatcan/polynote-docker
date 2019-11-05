@@ -1,6 +1,7 @@
 ARG JAVA_VERSION=""
+ARG SPARK_VERSION=""
 
-FROM mpolatcan/polynote:base-java${JAVA_VERSION}
+FROM mpolatcan/polynote:base-spark-${SPARK_VERSION}-java${JAVA_VERSION}
 
 MAINTAINER Mutlu Polatcan <mutlupolatcan@gmail.com>
 
