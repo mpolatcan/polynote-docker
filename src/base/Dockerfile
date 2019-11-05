@@ -28,7 +28,7 @@ WORKDIR ${POLYNOTE_HOME}
 RUN apt-get update && \
     apt-get -y install python3 python3-pip && \
     rm -rf /var/lib/apt/lists/* && \
-    pip3 install setuptools pyyaml jep jedi virtualenv matplotlib && \
+    pip3 install setuptools pyyaml jep jedi virtualenv matplotlib pyspark && \
     mkdir -p ${POLYNOTE_HOME} ${SPARK_HOME} && \
     wget ${SPARK_DOWNLOAD_LINK} && \
     tar -xvzf spark-${SPARK_VERSION}-bin-hadoop${SPARK_HADOOP_VERSION}.tgz -C ${POLYNOTE_HOME} && \
