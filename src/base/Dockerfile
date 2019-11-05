@@ -19,9 +19,9 @@ ENV PATH=$PATH:${SPARK_HOME}/bin:${SPARK_HOME}/sbin:${POLYNOTE_HOME} \
 	BEHAVIOR_KERNEL_ISOLATION="always" \
 	UI_BASE_URI="/"
 
-ADD config_template.yml /polynote_config_template.yml
-ADD config_loader.py /polynote_config_loader.py
-ADD entrypoint.sh /polynote_entrypoint.sh
+ADD config_template.yml ${POLYNOTE_HOME}/polynote_config_template.yml
+ADD config_loader.py ${POLYNOTE_HOME}/polynote_config_loader.py
+ADD entrypoint.sh ${POLYNOTE_HOME}/polynote_entrypoint.sh
 
 WORKDIR ${POLYNOTE_HOME}
 
