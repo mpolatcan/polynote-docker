@@ -1,0 +1,11 @@
+behavior:
+  dependency_isolation: ${BEHAVIOR_DEPENDENCY_ISOLATION}
+  kernel_isolation: ${BEHAVIOR_KERNEL_ISOLATION}
+listen:
+  host: ${LISTEN_HOST}
+  port: ${LISTEN_PORT}
+storage:
+  cache: ${STORAGE_CACHE}
+  dir: ${STORAGE_DIR}
+ui:
+  base_uri: ${UI_BASE_URI}

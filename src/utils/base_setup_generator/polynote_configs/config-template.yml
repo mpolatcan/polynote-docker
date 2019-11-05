@@ -1,0 +1,14 @@
+listen:
+  host: "0.0.0.0"
+  port: "8192"
+
+storage:
+  dir: "notebooks"
+  cache: "tmp"
+
+behavior:
+  dependency_isolation: "false"
+  kernel_isolation: "always"
+
+ui:
+  base_uri: "/"
