@@ -31,7 +31,7 @@ jobs:
       matrix:
         repository: [polynote]
         java_version: [8,11]
-        polynote_version: [0.2.11]
+        polynote_version: [0.2.11, 0.2.12]
         spark_version: [2.4.4, 2.3.4]
     needs: build-base-image
     steps:
